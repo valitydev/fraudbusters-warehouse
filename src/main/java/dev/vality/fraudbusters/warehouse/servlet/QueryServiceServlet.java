@@ -1,7 +1,7 @@
 package dev.vality.fraudbusters.warehouse.servlet;
 
-import com.rbkmoney.woody.thrift.impl.http.THServiceBuilder;
 import dev.vality.fraudbusters.warehouse.QueryServiceSrv;
+import dev.vality.woody.thrift.impl.http.THServiceBuilder;
 import lombok.RequiredArgsConstructor;
 
 import javax.servlet.*;
