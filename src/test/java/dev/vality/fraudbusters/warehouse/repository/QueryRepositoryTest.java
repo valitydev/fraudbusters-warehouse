@@ -1,8 +1,8 @@
 package dev.vality.fraudbusters.warehouse.repository;
 
-import com.rbkmoney.testcontainers.annotations.clickhouse.ClickhouseTestcontainer;
 import dev.vality.fraudbusters.warehouse.AbstractIntegrationTest;
 import dev.vality.fraudbusters.warehouse.query.TestQuery;
+import dev.vality.testcontainers.annotations.clickhouse.ClickhouseTestcontainer;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 

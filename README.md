@@ -23,4 +23,4 @@ fraudbusters-warehouse - сервис предназначен для взаим
 
 ![fb-warehouse.svg](doc/fb-warehouse.svg)
 
-Протокол взаимодействия описан [тут](https://github.com/rbkmoney/fraudbusters-warehouse-proto).
+Протокол взаимодействия описан [тут](https://github.com/vality/fraudbusters-warehouse-proto).
