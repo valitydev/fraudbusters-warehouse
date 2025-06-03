@@ -6,7 +6,7 @@
     <parent>
         <groupId>dev.vality</groupId>
         <artifactId>service-parent-pom</artifactId>
-        <version>1.0.19</version>
+        <version>3.1.0</version>
     </parent>
 
     <artifactId>fraudbusters-warehouse</artifactId>
@@ -25,7 +25,7 @@
         <warehouse.proto.version>1.12-afdcd48</warehouse.proto.version>
         <clickhouse-jdbc.version>0.3.1</clickhouse-jdbc.version>
         <testcontainers.annotations.version>1.3.0</testcontainers.annotations.version>
-        <commons.io.version>2.11.0</commons.io.version>
+        <commons.io.version>2.14.0</commons.io.version>
     </properties>
 
     <dependencies>
@@ -68,8 +68,8 @@
 
         <!--third party-->
         <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
         </dependency>
         <dependency>
             <groupId>ru.yandex.clickhouse</groupId>
@@ -158,6 +158,24 @@
                         <goals>
                             <goal>process</goal>
                         </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.cyclonedx</groupId>
+                <artifactId>cyclonedx-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>makeAggregateBom</goal>
+                        </goals>
+                        <configuration>
+                            <projectType>application</projectType>
+                            <outputDirectory>${project.build.directory}</outputDirectory>
+                            <outputFormat>json</outputFormat>
+                            <outputName>bom</outputName>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
