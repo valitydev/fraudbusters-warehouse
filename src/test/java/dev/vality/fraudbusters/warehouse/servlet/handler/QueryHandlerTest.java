@@ -6,7 +6,7 @@ import dev.vality.fraudbusters.warehouse.Result;
 import dev.vality.fraudbusters.warehouse.service.QueryService;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
 
 import java.util.Collections;
 import java.util.HashMap;
@@ -21,7 +21,7 @@ class QueryHandlerTest extends AbstractIntegrationTest {
     @Autowired
     private QueryHandler queryHandler;
 
-    @MockBean
+    @MockitoBean
     private QueryService queryService;
 
     @Test
