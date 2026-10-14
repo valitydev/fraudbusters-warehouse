@@ -46,5 +46,3 @@ clickhouse:
 testcontainers:
   clickhouse:
     tag: '19.17'
-
-spring.jackson.use-jackson2-defaults: true
